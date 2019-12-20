@@ -20,7 +20,7 @@ describe('server', function () {
             })
         })
     })
-    describe('register 404', function() {
+    
         it('404 should return since wrong request', function (){
             return request(server)
             .get('/api/auth/register')
@@ -28,11 +28,8 @@ describe('server', function () {
                 expect(res.status).toBe(404)
             })
         })
-    })
-
-    describe('register 201', function() {
         it(' should return 201 for account creation', function (){
-            const user = { username: "test", password: "test" }
+            const user = { username: "test1", password: "test1" }
             return request(server)
             .post('/api/auth/register')
             .send(user)
@@ -40,7 +37,7 @@ describe('server', function () {
                 expect(res.status).toBe(201)
             })
         })
-    })
+    
   
   
     /// Login test 
@@ -53,7 +50,7 @@ describe('server', function () {
             })
         })
     })
-    describe('Login 404', function() {
+   
         it('404 should return since wrong request', function (){
             return request(server)
             .get('/api/auth/login')
@@ -61,8 +58,8 @@ describe('server', function () {
                 expect(res.status).toBe(404)
             })
         })
-    })
-    describe('Login 201', function() {
+ 
+   
         it(' should return 201 for login', function (){
             const user = { username: "test", password: "test" }
             return request(server)
@@ -72,6 +69,4 @@ describe('server', function () {
                 expect(res.status).toBe(200)
             })
         })
-    })
-
 })
