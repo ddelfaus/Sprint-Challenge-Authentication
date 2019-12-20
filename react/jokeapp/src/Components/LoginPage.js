@@ -33,7 +33,7 @@ login = e => {
     .then(res => {
         localStorage.setItem('token', res.data.payload);
         console.log(res.data.payload)
-        this.props.history.push('/friends')
+        this.props.history.push('/jokes')
     })
     .catch(err=> console.log(err));
 
