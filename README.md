@@ -40,11 +40,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] What is the purpose of using _sessions_?
 
+    It stores user state allowing to use that data to communicate to middleware later on. You can save the user state even if the server refreshes
+
 - [ ] What does bcrypt do to help us store passwords in a secure manner.
+
+    Bcrypt takes the password and hashes it to a larger random code
 
 - [ ] What does bcrypt do to slow down attackers?
 
+    It makes the password harder to read by hashing it . More the password is hashed the longer it will take to decrypt it.
+
 - [ ] What are the three parts of the JSON Web Token?
+
+    Header, payload, and signature
 
 ## Minimum Viable Product
 

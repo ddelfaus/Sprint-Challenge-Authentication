@@ -15,4 +15,9 @@ server.use(express.json());
 server.use('/api/auth', authRouter);
 server.use('/api/jokes', authenticate, jokesRouter);
 
+
+server.get('/', (req, res) => {
+    res.status(200).json({ server: "server is up", dbemv: process.env.DB_ENV });
+  });
+
 module.exports = server;
